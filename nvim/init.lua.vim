@@ -52,12 +52,24 @@ require('nvim-treesitter.configs').setup({
     },
 })
 
-require('lspconfig').pyright.setup{}
-require('lspconfig').bashls.setup{}
-require('lspconfig').html.setup{}
-require('lspconfig').cssls.setup{}
-require('lspconfig').jsonls.setup{}
-require('lspconfig').vimls.setup{}
+-- mason
+require('mason').setup()
+require("mason-lspconfig").setup()
+require("mason-lspconfig").setup_handlers {
+    function (server_name)
+        require("lspconfig")[server_name].setup {}
+    end
+}
+
+-- null-ls
+local null_ls = require("null-ls")
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.phpcbf,
+        null_ls.builtins.formatting.phpcsfixer,
+        null_ls.builtins.formatting.prettier,
+    },
+})
 
 
 EOF
