@@ -31,7 +31,11 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc' 
 Plug 'nvim-lualine/lualine.nvim' " Status Line
 Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'} " Tree Sitter
+Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Mason
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig' " LSP
+Plug 'nvim-lua/plenary.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 call plug#end()
 
