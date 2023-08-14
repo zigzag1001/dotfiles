@@ -1,53 +1,75 @@
+lua<<EOF
 
 
-" Normal
+
+-- Plugins
+
+-- Color Scheme
+vim.g.material_style = "deep ocean"
+require('material').setup()
+vim.cmd 'colorscheme material'
+
+-- Copilot
+require('copilot').setup({suggestion = {auto_trigger = true, accept = false}})
+-- Change the accept ket to tab
+vim.keymap.set("i", '<Tab>', function()
+    if require("copilot.suggestion").is_visible() then
+        require("copilot.suggestion").accept()
+    else
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+    end
+end, {
+    silent = true,
+})
+
+--nvim-tree
+require('nvim-tree').setup()
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- nvim-web-devicons
+require('nvim-web-devicons').setup()
+
+-- lua-line
+require('lualine').setup()
+
+-- nvim-treesitter
+require('nvim-treesitter.configs').setup({
+    ensure_installed = {
+        "python",
+        "lua",
+        "bash",
+        "c",
+        "html",
+        "css",
+        "javascript",
+        "vim",
+        "json",
+        "yaml",
+    },
+    highlight = {
+        enable = true,
+    },
+})
+
+-- mason
+require('mason').setup()
+require("mason-lspconfig").setup()
+require("mason-lspconfig").setup_handlers {
+    function (server_name)
+        require("lspconfig")[server_name].setup {}
+    end
+}
+
+-- null-ls
+local null_ls = require("null-ls")
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.phpcbf,
+        null_ls.builtins.formatting.phpcsfixer,
+        null_ls.builtins.formatting.prettier,
+    },
+})
 
 
-set wrap " Line wrap
-set linebreak " Whole words dont wrap
-set number " Line nums
-set whichwrap+=<,>,[,] " Cursor wrap
-set cursorline " Highlight cursor line
-set tabstop=4 " Tab size
-set shiftwidth=4 " Indent size
-set expandtab " Use spaces instead of tabs
-set termguicolors " True color support
-
-
-" Plugins
-
-
-call plug#begin('~/.config/nvim/plugins')
-
-" General
-Plug 'tpope/vim-sensible'
-Plug 'zbirenbaum/copilot.lua'
-Plug 'marko-cerovac/material.nvim' " Color Scheme
-Plug 'nvim-tree/nvim-tree.lua' " File Explorer
-Plug 'nvim-tree/nvim-web-devicons' " Icons
-Plug 'wfxr/minimap.vim' " Minimap
-Plug 'gelguy/wilder.nvim' " wilder
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc' 
-Plug 'nvim-lualine/lualine.nvim' " Status Line
-Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'} " Tree Sitter
-Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Mason
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig' " LSP
-Plug 'nvim-lua/plenary.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-
-call plug#end()
-
-" Wilder
-call wilder#setup({'modes': [':', '/', '?']})
-call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
-      \ 'highlights': {
-      \   'border': 'Normal',
-      \ },
-      \ 'border': 'rounded',
-      \ })))
-
-
-" Source Lua Config
-source $HOME/.config/nvim/init.lua.vim
+EOF
