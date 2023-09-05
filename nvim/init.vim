@@ -36,6 +36,7 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig' " LSP
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'sbdchd/neoformat' " Formatter
 
 call plug#end()
 
