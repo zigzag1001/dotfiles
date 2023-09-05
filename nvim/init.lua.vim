@@ -1,6 +1,9 @@
 lua<<EOF
 
+-- General
 
+-- Restore last position
+vim.cmd 'autocmd BufReadPost * if line("\'\\"") > 0 && line("\'\\"") <= line("$") | exe "normal! g\'\\"" | endif'
 
 -- Plugins
 
