@@ -37,6 +37,12 @@ Plug 'neovim/nvim-lspconfig' " LSP
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'sbdchd/neoformat' " Formatter
+Plug 'windwp/nvim-autopairs' " Autopairs
+Plug 'tzachar/highlight-undo.nvim' " Undo Highlight
+Plug 'yuttie/comfortable-motion.vim' " Smooth Scrolling
+
+inoremap jk <esc>
+inoremap kj <esc>
 
 call plug#end()
 
