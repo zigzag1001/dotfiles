@@ -74,5 +74,11 @@ null_ls.setup({
     },
 })
 
+-- autopairs
+require('nvim-autopairs').setup()
+
+-- highlight-undo
+require('highlight-undo').setup()
+
 
 EOF
