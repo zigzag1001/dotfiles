@@ -40,6 +40,10 @@ Plug 'sbdchd/neoformat' " Formatter
 Plug 'windwp/nvim-autopairs' " Autopairs
 Plug 'tzachar/highlight-undo.nvim' " Undo Highlight
 Plug 'yuttie/comfortable-motion.vim' " Smooth Scrolling
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Bufferline
+Plug 'numToStr/Comment.nvim' " Comment
+Plug 'rcarriga/nvim-notify' " Notify
+Plug 'lukas-reineke/indent-blankline.nvim' " Indent Lines
 
 inoremap jk <esc>
 inoremap kj <esc>
