@@ -80,5 +80,17 @@ require('nvim-autopairs').setup()
 -- highlight-undo
 require('highlight-undo').setup()
 
+-- bufferline
+require('bufferline').setup()
+
+-- Comment
+require('Comment').setup()
+
+-- nvim notify
+require('notify').setup()
+
+-- indent-blankline
+require('indent_blankline').setup()
+
 
 EOF
