@@ -13,7 +13,7 @@ require('material').setup()
 vim.cmd 'colorscheme material'
 
 -- Copilot
-require('copilot').setup({suggestion = {auto_trigger = true, accept = false}})
+require('copilot').setup({suggestion = {suggestion = { enable = false}, panel = { enable = false}}})
 -- Change the accept ket to tab
 vim.keymap.set("i", '<Tab>', function()
     if require("copilot.suggestion").is_visible() then
@@ -64,16 +64,6 @@ require("mason-lspconfig").setup_handlers {
     end
 }
 
--- null-ls
-local null_ls = require("null-ls")
-null_ls.setup({
-    sources = {
-        null_ls.builtins.formatting.phpcbf,
-        null_ls.builtins.formatting.phpcsfixer,
-        null_ls.builtins.formatting.prettier,
-    },
-})
-
 -- autopairs
 require('nvim-autopairs').setup()
 
@@ -92,5 +82,38 @@ require('notify').setup()
 -- indent-blankline
 require('indent_blankline').setup()
 
+-- nvim-cmp
+local cmp = require('cmp')
+cmp.setup({
+    snippet = {
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
+    },
+    mapping = {
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<Tab>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        }),
+    },
+    sources = {
+        {name = 'copilot'},
+        {name = 'nvim_lsp'},
+        {name = 'vsnip'},
+        {name = 'buffer'},
+    },
+})
+
+-- noice
+require('noice').setup()
+
+-- copilot-cmp
+require("copilot_cmp").setup()
 
 EOF
