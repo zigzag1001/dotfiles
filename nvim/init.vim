@@ -44,6 +44,16 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Bufferline
 Plug 'numToStr/Comment.nvim' " Comment
 Plug 'rcarriga/nvim-notify' " Notify
 Plug 'lukas-reineke/indent-blankline.nvim' " Indent Lines
+Plug 'hrsh7th/nvim-cmp' " Autocomplete
+Plug 'hrsh7th/cmp-buffer' " Autocomplete
+Plug 'hrsh7th/cmp-nvim-lsp' " Autocomplete
+Plug 'hrsh7th/cmp-path' " Autocomplete
+Plug 'hrsh7th/cmp-cmdline' " Autocomplete
+Plug 'hrsh7th/cmp-vsnip' " Autocomplete
+Plug 'hrsh7th/vim-vsnip' " Autocomplete
+Plug 'folke/noice.nvim' " noice
+Plug 'MunifTanjim/nui.nvim' " nui
+Plug 'zbirenbaum/copilot-cmp' " copilot-cmp
 
 inoremap jk <esc>
 inoremap kj <esc>
