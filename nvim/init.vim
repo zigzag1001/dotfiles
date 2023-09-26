@@ -12,6 +12,7 @@ set tabstop=4 " Tab size
 set shiftwidth=4 " Indent size
 set expandtab " Use spaces instead of tabs
 set termguicolors " True color support
+set scrolloff=8 " Lines of context
 
 
 " Plugins
