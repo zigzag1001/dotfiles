@@ -53,6 +53,9 @@ Plug 'hrsh7th/vim-vsnip' " Autocomplete
 Plug 'folke/noice.nvim' " noice
 Plug 'MunifTanjim/nui.nvim' " nui
 Plug 'zbirenbaum/copilot-cmp' " copilot-cmp
+Plug 'RRethy/vim-illuminate' " highlight
+
+
 
 inoremap jk <esc>
 inoremap kj <esc>
