@@ -8,9 +8,7 @@ vim.cmd 'autocmd BufReadPost * if line("\'\\"") > 0 && line("\'\\"") <= line("$"
 -- Plugins
 
 -- Color Scheme
-vim.g.material_style = "deep ocean"
-require('material').setup()
-vim.cmd 'colorscheme material'
+vim.cmd[[colorscheme tokyonight-moon]]
 
 -- Copilot
 require('copilot').setup({suggestion = {suggestion = { enable = false}, panel = { enable = false}}})
@@ -113,9 +111,6 @@ cmp.setup({
         documentation = cmp.config.window.bordered(),
     }
 })
-
--- noice
-require('noice').setup()
 
 -- copilot-cmp
 require("copilot_cmp").setup()
