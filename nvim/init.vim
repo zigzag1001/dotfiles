@@ -22,7 +22,6 @@ call plug#begin('~/.config/nvim/plugins')
 " General
 Plug 'tpope/vim-sensible'
 Plug 'zbirenbaum/copilot.lua'
-Plug 'marko-cerovac/material.nvim' " Color Scheme
 Plug 'nvim-tree/nvim-tree.lua' " File Explorer
 Plug 'nvim-tree/nvim-web-devicons' " Icons
 Plug 'wfxr/minimap.vim' " Minimap
@@ -50,10 +49,10 @@ Plug 'hrsh7th/cmp-path' " Autocomplete
 Plug 'hrsh7th/cmp-cmdline' " Autocomplete
 Plug 'hrsh7th/cmp-vsnip' " Autocomplete
 Plug 'hrsh7th/vim-vsnip' " Autocomplete
-Plug 'folke/noice.nvim' " noice
 Plug 'MunifTanjim/nui.nvim' " nui
 Plug 'zbirenbaum/copilot-cmp' " copilot-cmp
 Plug 'RRethy/vim-illuminate' " highlight
+Plug 'folke/tokyonight.nvim' " Color Scheme
 
 
 
