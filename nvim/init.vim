@@ -54,23 +54,14 @@ Plug 'MunifTanjim/nui.nvim' " nui
 Plug 'zbirenbaum/copilot-cmp' " copilot-cmp
 Plug 'RRethy/vim-illuminate' " highlight
 Plug 'folke/tokyonight.nvim' " Color Scheme
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] } " Markdown Preview
 
 
+call plug#end()
 
 inoremap jk <esc>
 inoremap kj <esc>
 
-call plug#end()
-
-" Wilder
-call wilder#setup({'modes': [':', '/', '?']})
-call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
-      \ 'highlights': {
-      \   'border': 'Normal',
-      \ },
-      \ 'border': 'rounded',
-      \ })))
-
-
 " Source Lua Config
 source $HOME/.config/nvim/init.lua.vim
+
