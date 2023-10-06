@@ -37,7 +37,7 @@ wilder.set_option('renderer', wilder.popupmenu_renderer(
 vim.cmd[[colorscheme tokyonight-moon]]
 
 -- Copilot
-require('copilot').setup({suggestion = {suggestion = { enable = false}, panel = { enable = false}}})
+require('copilot').setup({suggestion = {suggestion = { enable = false}, panel = { enable = false}}, filetypes = {markdown = true, yaml = true}})
 -- Change the accept ket to tab
 vim.keymap.set("i", '<Tab>', function()
     if require("copilot.suggestion").is_visible() then
