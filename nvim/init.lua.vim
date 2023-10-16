@@ -104,7 +104,7 @@ require('Comment').setup()
 require('notify').setup()
 
 -- indent-blankline
-require('indent_blankline').setup()
+require("ibl").setup()
 
 -- nvim-cmp
 local cmp = require('cmp')
