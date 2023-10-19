@@ -55,6 +55,7 @@ Plug 'zbirenbaum/copilot-cmp' " copilot-cmp
 Plug 'RRethy/vim-illuminate' " highlight
 Plug 'folke/tokyonight.nvim' " Color Scheme
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] } " Markdown Preview
+Plug 'lewis6991/gitsigns.nvim' " Git Signs
 
 
 call plug#end()
