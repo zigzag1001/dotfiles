@@ -141,5 +141,8 @@ cmp.setup({
 -- copilot-cmp
 require("copilot_cmp").setup()
 
+-- git signs
+require('gitsigns').setup()
+
 EOF
 
