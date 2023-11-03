@@ -56,6 +56,9 @@ Plug 'RRethy/vim-illuminate' " highlight
 Plug 'folke/tokyonight.nvim' " Color Scheme
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] } " Markdown Preview
 Plug 'lewis6991/gitsigns.nvim' " Git Signs
+Plug 'hiphish/rainbow-delimiters.nvim' " rainbow parentheses
+Plug 'goolord/alpha-nvim' " Start Screen
+Plug 'chentoast/marks.nvim' " Markers marks
 
 
 call plug#end()
