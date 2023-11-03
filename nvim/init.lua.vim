@@ -144,5 +144,16 @@ require("copilot_cmp").setup()
 -- git signs
 require('gitsigns').setup()
 
+-- Rainbow Parentheses
+require('rainbow-delimiters.setup').setup()
+
+-- alpha
+require('alpha').setup(require('alpha.themes.startify').opts)
+
+-- Marks
+require('marks').setup()
+
+vim.loader.enable()
+
 EOF
 
