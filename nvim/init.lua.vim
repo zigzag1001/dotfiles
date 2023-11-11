@@ -153,6 +153,9 @@ require('alpha').setup(require('alpha.themes.startify').opts)
 -- Marks
 require('marks').setup()
 
+-- Which key
+require("which-key").setup()
+
 vim.loader.enable()
 
 EOF
