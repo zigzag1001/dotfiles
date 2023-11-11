@@ -59,6 +59,7 @@ Plug 'lewis6991/gitsigns.nvim' " Git Signs
 Plug 'hiphish/rainbow-delimiters.nvim' " rainbow parentheses
 Plug 'goolord/alpha-nvim' " Start Screen
 Plug 'chentoast/marks.nvim' " Markers marks
+Plug 'folke/which-key.nvim' " key hints
 
 
 call plug#end()
