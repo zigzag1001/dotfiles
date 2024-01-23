@@ -60,6 +60,7 @@ Plug 'hiphish/rainbow-delimiters.nvim' " rainbow parentheses
 Plug 'goolord/alpha-nvim' " Start Screen
 Plug 'chentoast/marks.nvim' " Markers marks
 Plug 'folke/which-key.nvim' " key hints
+Plug 'j-hui/fidget.nvim' " notifs
 
 
 call plug#end()
