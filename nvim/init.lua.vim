@@ -180,6 +180,9 @@ require('marks').setup()
 -- Which key
 require("which-key").setup()
 
+-- Fidget
+require('fidget').setup()
+
 vim.loader.enable()
 
 EOF
