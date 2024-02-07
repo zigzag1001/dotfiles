@@ -183,6 +183,9 @@ require("which-key").setup()
 -- Fidget
 require('fidget').setup()
 
+-- Leap
+require('leap').create_default_mappings()
+
 vim.loader.enable()
 
 EOF
