@@ -38,7 +38,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sbdchd/neoformat' " Formatter
 Plug 'windwp/nvim-autopairs' " Autopairs
 Plug 'tzachar/highlight-undo.nvim' " Undo Highlight
-Plug 'yuttie/comfortable-motion.vim' " Smooth Scrolling
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Bufferline
 Plug 'numToStr/Comment.nvim' " Comment
 Plug 'rcarriga/nvim-notify' " Notify
@@ -62,6 +61,7 @@ Plug 'chentoast/marks.nvim' " Markers marks
 Plug 'folke/which-key.nvim' " key hints
 Plug 'j-hui/fidget.nvim' " notifs
 Plug 'ggandor/leap.nvim' " jump to anywhere
+Plug 'echasnovski/mini.animate'
 
 
 call plug#end()
@@ -71,4 +71,3 @@ inoremap kj <esc>
 
 " Source Lua Config
 source $HOME/.config/nvim/init.lua.vim
-
