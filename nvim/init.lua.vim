@@ -186,7 +186,9 @@ require('fidget').setup()
 -- Leap
 require('leap').create_default_mappings()
 
+-- mini.animate
+require('mini.animate').setup()
+
 vim.loader.enable()
 
 EOF
-
