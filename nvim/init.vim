@@ -69,5 +69,12 @@ call plug#end()
 inoremap jk <esc>
 inoremap kj <esc>
 
+nnoremap <ScrollWheelDown> <C-D>
+nnoremap <ScrollWheelUp>   <C-U>
+vnoremap <ScrollWheelDown> <C-D>
+vnoremap <ScrollWheelUp>   <C-U>
+inoremap <ScrollWheelDown> <Esc><C-D>
+inoremap <ScrollWheelUp>   <Esc><C-U>
+
 " Source Lua Config
 source $HOME/.config/nvim/init.lua.vim
