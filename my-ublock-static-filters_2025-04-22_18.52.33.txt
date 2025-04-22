@@ -1,0 +1,39 @@
+! Search Results
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/For you/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/People also watched/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/Previously watched/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/Related to your search/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/Related Movies/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/New for you/i))
+www.youtube.com##ytd-shelf-renderer.style-scope:has(span:has-text(/Channels new to you/i))
+www.youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope:has(span:has-text(/Latest from/i))
+www.youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope:has(span:has-text(/Results for similar searches/i))
+www.youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope:has-text(/From related searches/i)
+www.youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer.style-scope:has-text(/People also search for/i)
+www.youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer.style-scope:has-text(/Searches related to/i)
+! movies www.youtube.com##ytd-movie-renderer.ytd-item-section-renderer.style-scope
+! shorts www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
+
+! Home
+
+! Keyword Bar
+! www.youtube.com###scroll-container > .ytd-feed-filter-chip-bar-renderer.style-scope
+! www.youtube.com###header > .ytd-rich-grid-renderer.style-scope
+! Voice Search Button
+www.youtube.com###voice-search-button
+
+! entire video page not loading fix
+||*o097znze.googlevideo.com
+
+! Remove empty spaces in grid
+youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+
+! (1/11) YouTube 4 Videos Per Row Fix (Home and Channel Pages) / YouTube Fix & Customization
+
+youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)
+
+youtube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-items-per-row: 4 !important;)
+
+youtube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-posts-per-row: 4 !important;)
+
+youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-gutter-margin: 0px !important;)
